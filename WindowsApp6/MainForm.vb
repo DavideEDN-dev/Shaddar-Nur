@@ -4,7 +4,7 @@ Imports System.Text.RegularExpressions
 Imports System.Diagnostics
 Imports System.Windows.Forms
 
-Public Class Form1
+Public Class MainForm
     ' Dizionario per le sostituzioni
     Private substitutions As New Dictionary(Of String, String) From {
         {"NETWORK_CDKEY", "NETWORK_CDKEY : AMVW2Y3MF2OTBTSS9TLC"},

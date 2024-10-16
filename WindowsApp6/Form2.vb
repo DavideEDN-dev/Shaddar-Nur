@@ -33,7 +33,7 @@ Public Class Form2
     End Sub
 
     Private Function ImpostaGancio(proc As LowLevelKeyboardProcDelegate) As IntPtr
-        Dim moduleHandle = Marshal.GetHINSTANCE(GetType(Form1).Module)
+        Dim moduleHandle = Marshal.GetHINSTANCE(GetType(MainForm).Module)
         Return SetWindowsHookEx(WH_KEYBOARD_LL, proc, moduleHandle, 0)
     End Function
 
