@@ -22,128 +22,160 @@ Partial Class Form2
     'Non modificarla mediante l'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.txtkey6 = New System.Windows.Forms.TextBox()
-        Me.txtKey7 = New System.Windows.Forms.TextBox()
-        Me.txtKey8 = New System.Windows.Forms.TextBox()
-        Me.txtKey9 = New System.Windows.Forms.TextBox()
-        Me.txtKey0 = New System.Windows.Forms.TextBox()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.WindowsApp6.My.Resources.Resources.Cool_Text___Keyboard_Remapper_467196848869570
-        Me.PictureBox3.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(468, 70)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.WindowsApp6.My.Resources.Resources.Senzanome
-        Me.PictureBox4.Location = New System.Drawing.Point(12, 88)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(468, 81)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 1
-        Me.PictureBox4.TabStop = False
-        '
-        'txtkey6
-        '
-        Me.txtkey6.BackColor = System.Drawing.Color.Black
-        Me.txtkey6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtkey6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtkey6.ForeColor = System.Drawing.Color.White
-        Me.txtkey6.Location = New System.Drawing.Point(27, 99)
-        Me.txtkey6.MaxLength = 1
-        Me.txtkey6.Name = "txtkey6"
-        Me.txtkey6.Size = New System.Drawing.Size(16, 15)
-        Me.txtkey6.TabIndex = 2
-        Me.txtkey6.TabStop = False
-        Me.txtkey6.Text = "6"
-        '
-        'txtKey7
-        '
-        Me.txtKey7.BackColor = System.Drawing.Color.Black
-        Me.txtKey7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtKey7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKey7.ForeColor = System.Drawing.Color.White
-        Me.txtKey7.Location = New System.Drawing.Point(122, 99)
-        Me.txtKey7.MaxLength = 1
-        Me.txtKey7.Name = "txtKey7"
-        Me.txtKey7.Size = New System.Drawing.Size(16, 15)
-        Me.txtKey7.TabIndex = 3
-        Me.txtKey7.TabStop = False
-        Me.txtKey7.Text = "7"
-        '
-        'txtKey8
-        '
-        Me.txtKey8.BackColor = System.Drawing.Color.Black
-        Me.txtKey8.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtKey8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKey8.ForeColor = System.Drawing.Color.White
-        Me.txtKey8.Location = New System.Drawing.Point(217, 99)
-        Me.txtKey8.MaxLength = 1
-        Me.txtKey8.Name = "txtKey8"
-        Me.txtKey8.Size = New System.Drawing.Size(16, 15)
-        Me.txtKey8.TabIndex = 4
-        Me.txtKey8.TabStop = False
-        Me.txtKey8.Text = "8"
-        '
-        'txtKey9
-        '
-        Me.txtKey9.BackColor = System.Drawing.Color.Black
-        Me.txtKey9.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtKey9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKey9.ForeColor = System.Drawing.Color.White
-        Me.txtKey9.Location = New System.Drawing.Point(310, 99)
-        Me.txtKey9.MaxLength = 1
-        Me.txtKey9.Name = "txtKey9"
-        Me.txtKey9.Size = New System.Drawing.Size(16, 15)
-        Me.txtKey9.TabIndex = 5
-        Me.txtKey9.TabStop = False
-        Me.txtKey9.Text = "9"
-        '
-        'txtKey0
-        '
-        Me.txtKey0.BackColor = System.Drawing.Color.Black
-        Me.txtKey0.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtKey0.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKey0.ForeColor = System.Drawing.Color.White
-        Me.txtKey0.Location = New System.Drawing.Point(405, 99)
-        Me.txtKey0.MaxLength = 1
-        Me.txtKey0.Name = "txtKey0"
-        Me.txtKey0.Size = New System.Drawing.Size(16, 15)
-        Me.txtKey0.TabIndex = 6
-        Me.txtKey0.TabStop = False
-        Me.txtKey0.Text = "0"
-        '
-        'Form2
-        '
-        Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(492, 181)
-        Me.Controls.Add(Me.txtKey0)
-        Me.Controls.Add(Me.txtKey9)
-        Me.Controls.Add(Me.txtKey8)
-        Me.Controls.Add(Me.txtKey7)
-        Me.Controls.Add(Me.txtkey6)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.Name = "Form2"
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Keyboard Remapper 1.1"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
+        PictureBox3 = New PictureBox()
+        PictureBox4 = New PictureBox()
+        txtkey6 = New TextBox()
+        txtKey7 = New TextBox()
+        txtKey8 = New TextBox()
+        txtKey9 = New TextBox()
+        txtKey0 = New TextBox()
+        TextBox1 = New TextBox()
+        btnAttiva = New Button()
+        btnDisattiva = New Button()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(12, 12)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(468, 70)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 0
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(12, 88)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(468, 81)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 1
+        PictureBox4.TabStop = False
+        ' 
+        ' txtkey6
+        ' 
+        txtkey6.BackColor = Color.Black
+        txtkey6.BorderStyle = BorderStyle.None
+        txtkey6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtkey6.ForeColor = Color.White
+        txtkey6.Location = New Point(27, 99)
+        txtkey6.MaxLength = 1
+        txtkey6.Name = "txtkey6"
+        txtkey6.Size = New Size(16, 15)
+        txtkey6.TabIndex = 2
+        txtkey6.TabStop = False
+        txtkey6.Text = "6"
+        ' 
+        ' txtKey7
+        ' 
+        txtKey7.BackColor = Color.Black
+        txtKey7.BorderStyle = BorderStyle.None
+        txtKey7.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtKey7.ForeColor = Color.White
+        txtKey7.Location = New Point(122, 99)
+        txtKey7.MaxLength = 1
+        txtKey7.Name = "txtKey7"
+        txtKey7.Size = New Size(16, 15)
+        txtKey7.TabIndex = 3
+        txtKey7.TabStop = False
+        txtKey7.Text = "7"
+        ' 
+        ' txtKey8
+        ' 
+        txtKey8.BackColor = Color.Black
+        txtKey8.BorderStyle = BorderStyle.None
+        txtKey8.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtKey8.ForeColor = Color.White
+        txtKey8.Location = New Point(217, 99)
+        txtKey8.MaxLength = 1
+        txtKey8.Name = "txtKey8"
+        txtKey8.Size = New Size(16, 15)
+        txtKey8.TabIndex = 4
+        txtKey8.TabStop = False
+        txtKey8.Text = "8"
+        ' 
+        ' txtKey9
+        ' 
+        txtKey9.BackColor = Color.Black
+        txtKey9.BorderStyle = BorderStyle.None
+        txtKey9.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtKey9.ForeColor = Color.White
+        txtKey9.Location = New Point(310, 99)
+        txtKey9.MaxLength = 1
+        txtKey9.Name = "txtKey9"
+        txtKey9.Size = New Size(16, 15)
+        txtKey9.TabIndex = 5
+        txtKey9.TabStop = False
+        txtKey9.Text = "9"
+        ' 
+        ' txtKey0
+        ' 
+        txtKey0.BackColor = Color.Black
+        txtKey0.BorderStyle = BorderStyle.None
+        txtKey0.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtKey0.ForeColor = Color.White
+        txtKey0.Location = New Point(405, 99)
+        txtKey0.MaxLength = 1
+        txtKey0.Name = "txtKey0"
+        txtKey0.Size = New Size(16, 15)
+        txtKey0.TabIndex = 6
+        txtKey0.TabStop = False
+        txtKey0.Text = "0"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(12, 230)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(468, 23)
+        TextBox1.TabIndex = 7
+        ' 
+        ' btnAttiva
+        ' 
+        btnAttiva.Location = New Point(12, 172)
+        btnAttiva.Name = "btnAttiva"
+        btnAttiva.Size = New Size(75, 23)
+        btnAttiva.TabIndex = 8
+        btnAttiva.Text = "Button1"
+        btnAttiva.UseVisualStyleBackColor = True
+        ' 
+        ' btnDisattiva
+        ' 
+        btnDisattiva.Location = New Point(12, 201)
+        btnDisattiva.Name = "btnDisattiva"
+        btnDisattiva.Size = New Size(75, 23)
+        btnDisattiva.TabIndex = 9
+        btnDisattiva.Text = "Button2"
+        btnDisattiva.UseVisualStyleBackColor = True
+        ' 
+        ' Form2
+        ' 
+        BackColor = Color.Black
+        ClientSize = New Size(492, 336)
+        Controls.Add(btnDisattiva)
+        Controls.Add(btnAttiva)
+        Controls.Add(TextBox1)
+        Controls.Add(txtKey0)
+        Controls.Add(txtKey9)
+        Controls.Add(txtKey8)
+        Controls.Add(txtKey7)
+        Controls.Add(txtkey6)
+        Controls.Add(PictureBox4)
+        Controls.Add(PictureBox3)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        Name = "Form2"
+        ShowInTaskbar = False
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Keyboard Remapper 1.1"
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
@@ -159,4 +191,7 @@ Partial Class Form2
     Friend WithEvents txtKey8 As TextBox
     Friend WithEvents txtKey9 As TextBox
     Friend WithEvents txtKey0 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnAttiva As Button
+    Friend WithEvents btnDisattiva As Button
 End Class

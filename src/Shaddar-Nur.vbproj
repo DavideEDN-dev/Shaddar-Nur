@@ -28,11 +28,14 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DocumentationFile>Shaddar-Nur.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>embedded</DebugType>
+    <DefineDebug>False</DefineDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineDebug>false</DefineDebug>
+    <DefineDebug>True</DefineDebug>
     <DocumentationFile>Shaddar-Nur.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -61,10 +64,11 @@
     <AssemblyTitle>Shaddar-Nur | Sacred Multiplayer</AssemblyTitle>
     <Description>Launcher per Sacred Online | Server Shaddar-Nur</Description>
     <Company>DavideEDN</Company>
-    <Product>Shaddar-Nur | Sacred Multiplayer</Product>
+    <Product>Shaddar-Nur | Sacred Online Community ITA</Product>
     <Copyright>Copyright ©  2024</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Import Include="System.Drawing" />
@@ -98,6 +102,9 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Update="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -115,6 +122,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2792.45" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Update="C:\Users\david\.nuget\packages\microsoft.web.webview2\1.0.2792.45\buildTransitive\..\\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Core.dll">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Update="C:\Users\david\.nuget\packages\microsoft.web.webview2\1.0.2792.45\buildTransitive\..\\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.WinForms.dll">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Update="C:\Users\david\.nuget\packages\microsoft.web.webview2\1.0.2792.45\buildTransitive\..\\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Wpf.dll">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
 </Project>

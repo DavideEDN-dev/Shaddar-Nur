@@ -1,0 +1,128 @@
+# Rimuovere la riga seguente se si vogliono ereditare le impostazioni del file con estensione editorconfig da directory di livello superiore
+root = true
+
+# File Visual Basic
+[*.vb]
+
+#### Opzioni EditorConfig di base ####
+
+# Rientro e spaziatura
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Preferenze per nuova riga
+end_of_line = crlf
+insert_final_newline = false
+
+#### Convenzioni di scrittura codice .NET ####
+
+# Organizza using
+dotnet_separate_import_directive_groups = false
+dotnet_sort_system_directives_first = true
+file_header_template = unset
+
+# Preferenze per this. e Me.
+dotnet_style_qualification_for_event = false
+dotnet_style_qualification_for_field = false
+dotnet_style_qualification_for_method = false
+dotnet_style_qualification_for_property = false
+
+# Preferenze per parole chiave linguaggio rispetto a tipi BCL
+dotnet_style_predefined_type_for_locals_parameters_members = true
+dotnet_style_predefined_type_for_member_access = true
+
+# Preferenze per parentesi
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
+
+# Preferenze per modificatore
+dotnet_style_require_accessibility_modifiers = for_non_interface_members
+
+# Preferenze a livello di espressione
+dotnet_style_coalesce_expression = true
+dotnet_style_collection_initializer = true
+dotnet_style_explicit_tuple_names = true
+dotnet_style_namespace_match_folder = true
+dotnet_style_null_propagation = true
+dotnet_style_object_initializer = true
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+dotnet_style_prefer_auto_properties = true
+dotnet_style_prefer_collection_expression = when_types_loosely_match
+dotnet_style_prefer_compound_assignment = true
+dotnet_style_prefer_conditional_expression_over_assignment = true
+dotnet_style_prefer_conditional_expression_over_return = true
+dotnet_style_prefer_foreach_explicit_cast_in_source = when_strongly_typed
+dotnet_style_prefer_inferred_anonymous_type_member_names = true
+dotnet_style_prefer_inferred_tuple_names = true
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+dotnet_style_prefer_simplified_boolean_expressions = true
+dotnet_style_prefer_simplified_interpolation = true
+
+# Preferenze per campi
+dotnet_style_readonly_field = true
+
+# Preferenze per parametri
+dotnet_code_quality_unused_parameters = all
+
+# Preferenze per eliminazione
+dotnet_remove_unnecessary_suppression_exclusions = none
+
+# Preferenze per nuova riga
+dotnet_style_allow_multiple_blank_lines_experimental = true
+dotnet_style_allow_statement_immediately_after_block_experimental = true
+
+#### Convenzioni di scrittura codice VB ####
+
+# Preferenze per modificatore
+visual_basic_preferred_modifier_order = partial,default,private,protected,public,friend,notoverridable,overridable,mustoverride,overloads,overrides,mustinherit,notinheritable,static,shared,shadows,readonly,writeonly,dim,const,withevents,widening,narrowing,custom,async,iterator
+
+# Preferenze a livello di espressione
+visual_basic_style_prefer_isnot_expression = true
+visual_basic_style_prefer_simplified_object_creation = true
+visual_basic_style_unused_value_assignment_preference = unused_local_variable
+visual_basic_style_unused_value_expression_statement_preference = unused_local_variable
+
+#### Stili di denominazione ####
+
+# Regole di denominazione
+
+dotnet_naming_rule.interface_should_be_inizia_con_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_inizia_con_i.symbols = interface
+dotnet_naming_rule.interface_should_be_inizia_con_i.style = inizia_con_i
+
+dotnet_naming_rule.tipi_should_be_notazione_pascal.severity = suggestion
+dotnet_naming_rule.tipi_should_be_notazione_pascal.symbols = tipi
+dotnet_naming_rule.tipi_should_be_notazione_pascal.style = notazione_pascal
+
+dotnet_naming_rule.membri_non_di_campo_should_be_notazione_pascal.severity = suggestion
+dotnet_naming_rule.membri_non_di_campo_should_be_notazione_pascal.symbols = membri_non_di_campo
+dotnet_naming_rule.membri_non_di_campo_should_be_notazione_pascal.style = notazione_pascal
+
+# Specifiche dei simboli
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.tipi.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.tipi.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.tipi.required_modifiers = 
+
+dotnet_naming_symbols.membri_non_di_campo.applicable_kinds = property, event, method
+dotnet_naming_symbols.membri_non_di_campo.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.membri_non_di_campo.required_modifiers = 
+
+# Stili di denominazione
+
+dotnet_naming_style.notazione_pascal.required_prefix = 
+dotnet_naming_style.notazione_pascal.required_suffix = 
+dotnet_naming_style.notazione_pascal.word_separator = 
+dotnet_naming_style.notazione_pascal.capitalization = pascal_case
+
+dotnet_naming_style.inizia_con_i.required_prefix = I
+dotnet_naming_style.inizia_con_i.required_suffix = 
+dotnet_naming_style.inizia_con_i.word_separator = 
+dotnet_naming_style.inizia_con_i.capitalization = pascal_case

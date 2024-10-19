@@ -1,6 +1,5 @@
-﻿Imports System.Net
-Imports System.Runtime.InteropServices
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Runtime.InteropServices
+Imports System.Windows.Forms
 
 Public Class Form2
     Inherits Form
@@ -11,11 +10,10 @@ Public Class Form2
 
     Private hookID As IntPtr = IntPtr.Zero
     Private lowLevelKeyboardProc As LowLevelKeyboardProcDelegate
-    Private isHookAttivo As Boolean = False ' Set to False to start with the hook deactivated
+    Private isHookAttivo As Boolean = False
 
-    Private Delegate Function LowLevelKeyboardProcDelegate(ByVal nCode As Integer, ByVal wParam As IntPtr, ByVal lParam As IntPtr) As IntPtr
+    Private Delegate Function LowLevelKeyboardProcDelegate(nCode As Integer, wParam As IntPtr, lParam As IntPtr) As IntPtr
 
-    ' Variables to track key states
     Private isKeyQPressed As Boolean = False
     Private isNumPad5Pressed As Boolean = False
     Private isNumPad4Pressed As Boolean = False
@@ -25,51 +23,41 @@ Public Class Form2
     Public Sub New()
         InitializeComponent()
         lowLevelKeyboardProc = New LowLevelKeyboardProcDelegate(AddressOf CallbackGancio)
+        AddHandler btnAttiva.Click, AddressOf BtnAttiva_Click
+        AddHandler btnDisattiva.Click, AddressOf BtnDisattiva_Click
     End Sub
 
     Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
-        MyBase.OnFormClosing(e)
         UnhookWindowsHookEx(hookID)
+        MyBase.OnFormClosing(e)
     End Sub
 
     Private Function ImpostaGancio(proc As LowLevelKeyboardProcDelegate) As IntPtr
-        Dim moduleHandle = Marshal.GetHINSTANCE(GetType(MainForm).Module)
+        Dim moduleHandle = Marshal.GetHINSTANCE(GetType(Form2).Module)
         Return SetWindowsHookEx(WH_KEYBOARD_LL, proc, moduleHandle, 0)
     End Function
 
     Private Function CallbackGancio(nCode As Integer, wParam As IntPtr, lParam As IntPtr) As IntPtr
-        Try
-            If nCode >= 0 Then
-                Dim vkCode As Integer = Marshal.ReadInt32(lParam)
+        If nCode >= 0 Then
+            Dim vkCode As Integer = Marshal.ReadInt32(lParam)
 
-                If wParam = New IntPtr(WM_KEYDOWN) Then
-                    If (Control.ModifierKeys And Keys.Control) <> 0 AndAlso vkCode = Keys.C Then
-                        ToggleGancio()
-                    End If
-                End If
-                If isHookAttivo Then
-                    Select Case vkCode
-                        Case Keys.A
-                            Return GestisciRimappatura(wParam, isKeyQPressed, txtkey6.Text, Keys.A)
-                        Case Keys.S
-                            Return GestisciRimappatura(wParam, isNumPad5Pressed, txtKey7.Text, Keys.S)
-                        Case Keys.D
-                            Return GestisciRimappatura(wParam, isNumPad4Pressed, txtKey8.Text, Keys.D)
-
-                        Case Keys.F
-                            Return GestisciRimappatura(wParam, isNumPad6Pressed, txtKey9.Text, Keys.F)
-                        Case Keys.G
-                            Return GestisciRimappatura(wParam, isNumPad6Pressed, txtKey0.Text, Keys.G)
-
-                    End Select
-                End If
+            If isHookAttivo Then
+                Select Case vkCode
+                    Case Keys.A
+                        Return GestisciRimappatura(wParam, isKeyQPressed, txtkey6.Text, Keys.A)
+                    Case Keys.S
+                        Return GestisciRimappatura(wParam, isNumPad5Pressed, txtKey7.Text, Keys.S)
+                    Case Keys.D
+                        Return GestisciRimappatura(wParam, isNumPad4Pressed, txtKey8.Text, Keys.D)
+                    Case Keys.F
+                        Return GestisciRimappatura(wParam, isNumPad6Pressed, txtKey9.Text, Keys.F)
+                    Case Keys.G
+                        Return GestisciRimappatura(wParam, isNumPad6Pressed, txtKey0.Text, Keys.G)
+                End Select
             End If
+        End If
 
-            Return CallNextHookEx(hookID, nCode, wParam, lParam)
-
-        Catch ex As Exception
-            Return IntPtr.Zero
-        End Try
+        Return CallNextHookEx(hookID, nCode, wParam, lParam)
     End Function
 
     Private Function GestisciRimappatura(wParam As IntPtr, ByRef isKeyPressed As Boolean, testoInviare As String, vkCode As Keys) As IntPtr
@@ -93,10 +81,18 @@ Public Class Form2
         Return New IntPtr(1)
     End Function
 
+    Private Sub BtnAttiva_Click(sender As Object, e As EventArgs)
+        If Not isHookAttivo Then ToggleGancio()
+    End Sub
+
+    Private Sub BtnDisattiva_Click(sender As Object, e As EventArgs)
+        If isHookAttivo Then ToggleGancio()
+    End Sub
+
     Private Sub ToggleGancio()
         isHookAttivo = Not isHookAttivo
-        ' Optionally inform the user about the hook status change.
-        ' MessageBox.Show(Me, "Hook " & If(isHookAttivo, "Attivato", "Disattivato"), "Variazione Hook")
+
+        MessageBox.Show("Hook " & If(isHookAttivo, "Attivato", "Disattivato"), "Variazione Hook")
     End Sub
 
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
@@ -111,8 +107,16 @@ Public Class Form2
     Private Shared Function CallNextHookEx(hhk As IntPtr, nCode As Integer, wParam As IntPtr, lParam As IntPtr) As IntPtr
     End Function
 
-    Private Sub Form2_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hookID = ImpostaGancio(lowLevelKeyboardProc)
-        MessageBox.Show("Benvenuti nel Keyboard Remapper !" & vbCrLf & " " & vbCrLf & "Imposta i tasti A,S,D,F in sostituzione a quelli che preferisci, puoi modificare i parametri cliccando sui numeri preimpostati. " & vbCrLf & " " & vbCrLf & "Infine premi la combinazione CTRL + C per attivazione/disattivazione." & vbCrLf & " " & vbCrLf & "- DavideEDN", "Keyboard Remapper 1.0")
+        MessageBox.Show("Benvenuti nel Keyboard Remapper !" & vbCrLf & " " & vbCrLf &
+                        "Imposta i tasti A,S,D,F in sostituzione a quelli che preferisci," &
+                        " puoi modificare i parametri cliccando sui numeri preimpostati." & vbCrLf &
+                        " " & vbCrLf &
+                        "Utilizza i pulsanti per attivare o disattivare il gancio." &
+                        vbCrLf & " " & vbCrLf &
+                        "- DavideEDN",
+                        "Keyboard Remapper 1.0")
     End Sub
+
 End Class
