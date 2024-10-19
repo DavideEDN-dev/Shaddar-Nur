@@ -2,8 +2,8 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApp6.My.MyApplication</StartupObject>
-    <RootNamespace>WindowsApp6</RootNamespace>
+    <StartupObject>ShaddarNur.My.MyApplication</StartupObject>
+    <RootNamespace>ShaddarNur</RootNamespace>
     <MyType>WindowsForms</MyType>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -49,7 +49,7 @@
     <ManifestCertificateThumbprint>598ABCE5E8C8CFF01D52504A580D44A095512BF8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>WindowsApp6_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ShaddarNur_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>
