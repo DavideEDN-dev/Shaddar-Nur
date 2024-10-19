@@ -4,7 +4,7 @@ Imports System.Text.RegularExpressions
 Imports System.Diagnostics
 Imports System.Windows.Forms
 
-Public Class MainForm
+Public Class SchermataPrincipale
     Private substitutions As New Dictionary(Of String, String) From {
         {"NETWORK_CDKEY", "NETWORK_CDKEY : AMVW2Y3MF2OTBTSS9TLC"},
         {"NETWORK_CDKEY2", "NETWORK_CDKEY2 : 3L4FLSIRGBQS8BTCMGE9"},
@@ -72,7 +72,7 @@ Public Class MainForm
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Form3.Show()
+        ScegliRisoluzione.Show()
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
@@ -118,7 +118,7 @@ Public Class MainForm
                                                           MessageBoxButtons.YesNo)
 
             If result = DialogResult.Yes Then
-                Dim form3 As New Form3()
+                Dim form3 As New ScegliRisoluzione()
                 form3.Show()
             End If
         Catch ex As Exception

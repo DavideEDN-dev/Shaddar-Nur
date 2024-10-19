@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.ShaddarNur.MainForm
+            Me.MainForm = Global.ShaddarNur.SchermataPrincipale
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

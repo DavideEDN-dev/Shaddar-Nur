@@ -1,7 +1,7 @@
 ﻿Imports System.Diagnostics
 Imports System.Text.RegularExpressions
 
-Public Class Form3
+Public Class ScegliRisoluzione
     Private substitutions As New Dictionary(Of String, String) From {
         {"NETWORK_CDKEY", "NETWORK_CDKEY : AMVW2Y3MF2OTBTSS9TLC"},
         {"NETWORK_CDKEY2", "NETWORK_CDKEY2 : 3L4FLSIRGBQS8BTCMGE9"},

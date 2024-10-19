@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
 Imports System.Windows.Forms
 
-Public Class Form2
+Public Class KeyboardRemapper
     Inherits Form
 
     Private Const WH_KEYBOARD_LL As Integer = 13
@@ -33,7 +33,7 @@ Public Class Form2
     End Sub
 
     Private Function ImpostaGancio(proc As LowLevelKeyboardProcDelegate) As IntPtr
-        Dim moduleHandle = Marshal.GetHINSTANCE(GetType(Form2).Module)
+        Dim moduleHandle = Marshal.GetHINSTANCE(GetType(KeyboardRemapper).Module)
         Return SetWindowsHookEx(WH_KEYBOARD_LL, proc, moduleHandle, 0)
     End Function
 
