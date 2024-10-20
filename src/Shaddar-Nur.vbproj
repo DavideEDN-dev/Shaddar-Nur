@@ -2,8 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApp6.My.MyApplication</StartupObject>
-    <RootNamespace>WindowsApp6</RootNamespace>
+	<PlatformName>Windows</PlatformName>
+    <StartupObject>ShaddarNur.My.MyApplication</StartupObject>
+    <RootNamespace>ShaddarNur</RootNamespace>
     <MyType>WindowsForms</MyType>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -22,20 +23,22 @@
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <UseWindowsForms>True</UseWindowsForms>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DocumentationFile>Shaddar-Nur.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>CA1416,42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>embedded</DebugType>
     <DefineDebug>False</DefineDebug>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DefineDebug>True</DefineDebug>
     <DocumentationFile>Shaddar-Nur.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>CA1416,42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>embedded</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -47,7 +50,7 @@
     <ManifestCertificateThumbprint>598ABCE5E8C8CFF01D52504A580D44A095512BF8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>WindowsApp6_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ShaddarNur_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>
@@ -69,17 +72,18 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Update="KeyboardRemapper.Designer.vb">
+      <DependentUpon>KeyboardRemapper.vb</DependentUpon>
     </Compile>
-    <Compile Update="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Update="ScegliRisoluzione.Designer.vb">
+      <DependentUpon>ScegliRisoluzione.vb</DependentUpon>
     </Compile>
     <Compile Update="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -110,34 +114,7 @@
     <Content Include="favicon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 e x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2792.45" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Update="C:\Users\david\.nuget\packages\microsoft.web.webview2\1.0.2792.45\buildTransitive\..\\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Core.dll">
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Update="C:\Users\david\.nuget\packages\microsoft.web.webview2\1.0.2792.45\buildTransitive\..\\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.WinForms.dll">
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Update="C:\Users\david\.nuget\packages\microsoft.web.webview2\1.0.2792.45\buildTransitive\..\\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Wpf.dll">
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
 </Project>
