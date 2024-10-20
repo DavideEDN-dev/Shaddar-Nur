@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
+	<PlatformName>Windows</PlatformName>
     <StartupObject>ShaddarNur.My.MyApplication</StartupObject>
     <RootNamespace>ShaddarNur</RootNamespace>
     <MyType>WindowsForms</MyType>
@@ -22,12 +23,12 @@
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
 	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DocumentationFile>Shaddar-Nur.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>CA1416,42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>embedded</DebugType>
     <DefineDebug>False</DefineDebug>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,7 +36,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DefineDebug>True</DefineDebug>
     <DocumentationFile>Shaddar-Nur.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>CA1416,42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>embedded</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
@@ -71,6 +72,7 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
     <Import Include="System.Drawing" />
