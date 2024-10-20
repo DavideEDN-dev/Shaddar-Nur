@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CE2882BC-B967-492F-A915-8C01B849A1DB}|src\\Shaddar-Nur.vbproj|c:\\users\\david\\desktop\\davideedn-dev\\shaddar-nur\\src\\schermataprincipale.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CE2882BC-B967-492F-A915-8C01B849A1DB}|src\\Shaddar-Nur.vbproj|solutionrelative:src\\schermataprincipale.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE2882BC-B967-492F-A915-8C01B849A1DB}|src\\Shaddar-Nur.vbproj|c:\\users\\david\\desktop\\davideedn-dev\\shaddar-nur\\src\\schermataprincipale.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CE2882BC-B967-492F-A915-8C01B849A1DB}|src\\Shaddar-Nur.vbproj|solutionrelative:src\\schermataprincipale.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SchermataPrincipale.vb",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\SchermataPrincipale.vb",
+              "RelativeDocumentMoniker": "src\\SchermataPrincipale.vb",
+              "ToolTip": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\SchermataPrincipale.vb",
+              "RelativeToolTip": "src\\SchermataPrincipale.vb",
+              "ViewState": "AgIAAIwAAAAAAAAAAIA4wJ8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-20T17:33:39.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SchermataPrincipale.vb [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\SchermataPrincipale.vb",
+              "RelativeDocumentMoniker": "src\\SchermataPrincipale.vb",
+              "ToolTip": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\SchermataPrincipale.vb [Progettazione]",
+              "RelativeToolTip": "src\\SchermataPrincipale.vb [Progettazione]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-20T17:33:32.656Z",
+              "EditorCaption": " [Progettazione]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

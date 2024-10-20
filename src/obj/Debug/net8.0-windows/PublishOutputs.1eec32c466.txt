@@ -1,0 +1,5 @@
+C:\Users\david\source\repos\DavideEDN-dev\Shaddar-Nur\src\bin\Release\net8.0-windows\publish\Shaddar-Nur.exe
+C:\Users\david\source\repos\DavideEDN-dev\Shaddar-Nur\src\bin\Release\net8.0-windows\publish\Shaddar-Nur.dll
+C:\Users\david\source\repos\DavideEDN-dev\Shaddar-Nur\src\bin\Release\net8.0-windows\publish\Shaddar-Nur.deps.json
+C:\Users\david\source\repos\DavideEDN-dev\Shaddar-Nur\src\bin\Release\net8.0-windows\publish\Shaddar-Nur.runtimeconfig.json
+C:\Users\david\source\repos\DavideEDN-dev\Shaddar-Nur\src\bin\Release\net8.0-windows\publish\Shaddar-Nur.dll.config

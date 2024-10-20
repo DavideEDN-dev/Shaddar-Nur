@@ -1,0 +1,14 @@
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Shaddar-Nur.exe
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Shaddar-Nur.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Shaddar-Nur.deps.json
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Shaddar-Nur.runtimeconfig.json
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Shaddar-Nur.dll.config
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Microsoft.Web.WebView2.Core.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Microsoft.Web.WebView2.Core.xml
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\david\Desktop\DavideEDN-dev\Shaddar-Nur\src\bin\Debug\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.xml

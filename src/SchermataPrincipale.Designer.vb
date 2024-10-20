@@ -35,7 +35,7 @@ Partial Class SchermataPrincipale
         GroupBox3 = New GroupBox()
         GroupBox4 = New GroupBox()
         GroupBox5 = New GroupBox()
-        btnModifica = New Button()
+        BtnModifica = New Button()
         Button5 = New Button()
         Timer1 = New Timer(components)
         Button6 = New Button()
@@ -164,7 +164,7 @@ Partial Class SchermataPrincipale
         WebView22.Size = New Size(878, 497)
         WebView22.Source = New Uri("https://shaddarnur.altervista.org/pages/news2.html", UriKind.Absolute)
         WebView22.TabIndex = 0
-        WebView22.ZoomFactor = 1.0R
+        WebView22.ZoomFactor = 1R
         ' 
         ' GroupBox3
         ' 
@@ -194,7 +194,7 @@ Partial Class SchermataPrincipale
         ' 
         ' GroupBox5
         ' 
-        GroupBox5.Controls.Add(btnModifica)
+        GroupBox5.Controls.Add(BtnModifica)
         GroupBox5.Controls.Add(Button5)
         GroupBox5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox5.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -207,18 +207,18 @@ Partial Class SchermataPrincipale
         GroupBox5.TabStop = False
         GroupBox5.Text = "Gioca a Sacred"
         ' 
-        ' btnModifica
+        ' BtnModifica
         ' 
-        btnModifica.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnModifica.ForeColor = Color.Black
-        btnModifica.Location = New Point(8, 57)
-        btnModifica.Margin = New Padding(4, 3, 4, 3)
-        btnModifica.Name = "btnModifica"
-        btnModifica.Size = New Size(273, 27)
-        btnModifica.TabIndex = 6
-        btnModifica.TabStop = False
-        btnModifica.Text = "Avvia il Gioco (Sacred.exe)"
-        btnModifica.UseVisualStyleBackColor = True
+        BtnModifica.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnModifica.ForeColor = Color.Black
+        BtnModifica.Location = New Point(8, 57)
+        BtnModifica.Margin = New Padding(4, 3, 4, 3)
+        BtnModifica.Name = "BtnModifica"
+        BtnModifica.Size = New Size(273, 27)
+        BtnModifica.TabIndex = 6
+        BtnModifica.TabStop = False
+        BtnModifica.Text = "Avvia il Gioco (Sacred.exe)"
+        BtnModifica.UseVisualStyleBackColor = True
         ' 
         ' Button5
         ' 
@@ -420,9 +420,9 @@ Partial Class SchermataPrincipale
         Button11.Text = "Mappa Interattiva"
         Button11.UseVisualStyleBackColor = True
         ' 
-        ' MainForm
+        ' SchermataPrincipale
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         ClientSize = New Size(1214, 641)
@@ -440,9 +440,9 @@ Partial Class SchermataPrincipale
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(4, 3, 4, 3)
         MaximizeBox = False
-        Name = "MainForm"
+        Name = "SchermataPrincipale"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Shaddar-Nur | Sacred Online Community ITA | 1.2.0"
+        Text = "Shaddar-Nur | Sacred Online Community ITA | 1.2.1"
         GroupBox2.ResumeLayout(False)
         CType(WebView22, ComponentModel.ISupportInitialize).EndInit()
         GroupBox3.ResumeLayout(False)
@@ -468,7 +468,7 @@ Partial Class SchermataPrincipale
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button4 As Button
     Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents btnModifica As Button
+    Friend WithEvents BtnModifica As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Button6 As Button

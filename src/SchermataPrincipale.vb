@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-Imports System.Net
+Imports System.Net.Http
 Imports System.Text.RegularExpressions
 Imports System.Diagnostics
 Imports System.Windows.Forms
@@ -18,7 +18,7 @@ Public Class SchermataPrincipale
         Button5.Enabled = File.Exists(percorsoEseguibile)
     End Sub
 
-    Private Sub btnModifica_Click(sender As Object, e As EventArgs) Handles btnModifica.Click
+    Private Sub BtnModifica_Click(sender As Object, e As EventArgs) Handles BtnModifica.Click
         Dim filePath As String = "Settings.cfg"
         If File.Exists(filePath) Then
             Try
@@ -64,7 +64,7 @@ Public Class SchermataPrincipale
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
-            Dim discordLink = "https://discord.gg/fQtr7b8H7Q"
+            Dim discordLink As String = "https://discord.gg/fQtr7b8H7Q"
             Process.Start(New ProcessStartInfo(discordLink) With {.UseShellExecute = True})
         Catch ex As Exception
             MessageBox.Show("Si è verificato un errore: " & ex.Message)
@@ -84,7 +84,7 @@ Public Class SchermataPrincipale
         End Try
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Async Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim savePath As String = Application.StartupPath
         Dim fontDirectory As String = Path.Combine(savePath, "font")
         Dim urls As New List(Of String) From {
@@ -99,16 +99,20 @@ Public Class SchermataPrincipale
                 Directory.CreateDirectory(fontDirectory)
             End If
 
-            Using client As New WebClient()
+            Using client As New HttpClient()
                 For Each fileUrl In urls
                     Dim fileName As String = Path.GetFileName(fileUrl)
                     Dim fullPath As String
+
                     If fileUrl.Contains("/font/") Then
                         fullPath = Path.Combine(fontDirectory, fileName)
                     Else
                         fullPath = Path.Combine(savePath, fileName)
                     End If
-                    client.DownloadFile(fileUrl, fullPath)
+
+                    ' Download the file asynchronously and save it to the specified path.
+                    Dim responseBytes As Byte() = Await client.GetByteArrayAsync(fileUrl)
+                    File.WriteAllBytes(fullPath, responseBytes)
                 Next
             End Using
 
@@ -155,7 +159,7 @@ Public Class SchermataPrincipale
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         MessageBox.Show("Sacred-Tribute - https://sacred-tribute.com" & vbCrLf & "" & vbCrLf &
                         "LobbyServer Hosting - DarkHack[DarkBloods.Admin]" & vbCrLf & "" & vbCrLf &
-                        "LobbyServer Developer - kryotek777" & vbCrLf & "" & vbCrLf &
+                        "LobbyServer Developer - Shaddar-Nur Launcher Revisor" & vbCrLf & "kryotek777" & vbCrLf & "" & vbCrLf &
                         "TUROKhc - Sacred Online Community ITA" & vbCrLf & "" & vbCrLf &
                         "pureHD 1.40 | Mappa Interattiva - WilliamTokarev" & vbCrLf & "" & vbCrLf &
                         "Un Ringraziamento speciale anche per tutti voi amici di" & vbCrLf &
@@ -166,4 +170,5 @@ Public Class SchermataPrincipale
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
         WebView22.CoreWebView2.Navigate("https://shaddarnur.altervista.org/pages/news2.html")
     End Sub
+
 End Class

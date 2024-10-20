@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "WPyAbwhYYis=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\david\\Desktop\\Shaddar-Nur-master\\Shaddar-Nur-master\\src\\Shaddar-Nur.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.8\\microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.web.webview2\\1.0.2792.45\\microsoft.web.webview2.1.0.2792.45.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
