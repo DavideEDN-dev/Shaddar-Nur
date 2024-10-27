@@ -22,40 +22,43 @@ Partial Class ScegliRisoluzione
     'Non modificarla mediante l'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ButtonApply = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(244, 21)
-        Me.ComboBox1.TabIndex = 0
-        '
-        'ButtonApply
-        '
-        Me.ButtonApply.Location = New System.Drawing.Point(263, 13)
-        Me.ButtonApply.Name = "ButtonApply"
-        Me.ButtonApply.Size = New System.Drawing.Size(75, 21)
-        Me.ButtonApply.TabIndex = 1
-        Me.ButtonApply.Text = "Avvia Gioco"
-        Me.ButtonApply.UseVisualStyleBackColor = True
-        '
-        'Form3
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(350, 46)
-        Me.Controls.Add(Me.ButtonApply)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Name = "Form3"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Shaddar Nur | Applica Risoluzione"
-        Me.ResumeLayout(False)
+        ComboBox1 = New ComboBox()
+        ButtonApply = New Button()
+        SuspendLayout()
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(15, 15)
+        ComboBox1.Margin = New Padding(4, 3, 4, 3)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(284, 23)
+        ComboBox1.TabIndex = 0
+        ' 
+        ' ButtonApply
+        ' 
+        ButtonApply.Location = New Point(307, 15)
+        ButtonApply.Margin = New Padding(4, 3, 4, 3)
+        ButtonApply.Name = "ButtonApply"
+        ButtonApply.Size = New Size(88, 24)
+        ButtonApply.TabIndex = 1
+        ButtonApply.Text = "Avvia Gioco"
+        ButtonApply.UseVisualStyleBackColor = True
+        ' 
+        ' ScegliRisoluzione
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        ClientSize = New Size(408, 53)
+        Controls.Add(ButtonApply)
+        Controls.Add(ComboBox1)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        Margin = New Padding(4, 3, 4, 3)
+        Name = "ScegliRisoluzione"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Shaddar Nur | Applica Risoluzione"
+        ResumeLayout(False)
 
     End Sub
 

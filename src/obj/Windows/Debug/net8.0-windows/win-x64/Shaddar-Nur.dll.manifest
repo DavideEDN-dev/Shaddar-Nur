@@ -63,13 +63,13 @@
       <dsig:DigestValue>W0utyxtX6YU00Vl8KNhAMX+huOGV6hJmYa1Mz1sKHTo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Shaddar-Nur.dll.config" size="181">
+  <file name="Shaddar-Nur.dll.config" size="186">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ilY0suliFV/MHvLpYNZ6rPm99es/e/beZngtueK3/Rw=</dsig:DigestValue>
+      <dsig:DigestValue>rO4mjoMPTzC1RdE+BMvf0lfywGmtOsKfE96n+SRa584=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

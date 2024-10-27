@@ -3,6 +3,8 @@ Imports System.Net.Http
 Imports System.Text.RegularExpressions
 Imports System.Diagnostics
 Imports System.Windows.Forms
+Imports System.Linq.Expressions
+Imports System.Diagnostics.Eventing.Reader
 
 Public Class SchermataPrincipale
     Private substitutions As New Dictionary(Of String, String) From {
@@ -85,14 +87,14 @@ Public Class SchermataPrincipale
     End Sub
 
     Private Async Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Dim savePath As String = Application.StartupPath
-        Dim fontDirectory As String = Path.Combine(savePath, "font")
+        Dim savePath = Application.StartupPath
+        Dim fontDirectory = Path.Combine(savePath, "font")
         Dim urls As New List(Of String) From {
-            "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/pHD.dll",
-            "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/pureHD.exe",
-            "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/font/AntiquaSSK.TTF",
-            "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/font/CyrillicChancellor.TTF"
-        }
+        "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/pHD.dll",
+        "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/pureHD.exe",
+        "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/font/AntiquaSSK.TTF",
+        "https://sacred-tribute.com/community/Shaddar-Nur/pureHD/font/CyrillicChancellor.TTF"
+    }
 
         Try
             If Not Directory.Exists(fontDirectory) Then
@@ -101,25 +103,25 @@ Public Class SchermataPrincipale
 
             Using client As New HttpClient()
                 For Each fileUrl In urls
-                    Dim fileName As String = Path.GetFileName(fileUrl)
-                    Dim fullPath As String
-
-                    If fileUrl.Contains("/font/") Then
-                        fullPath = Path.Combine(fontDirectory, fileName)
-                    Else
-                        fullPath = Path.Combine(savePath, fileName)
-                    End If
+                    Dim fileName = Path.GetFileName(fileUrl)
+                    Dim fullPath As String = If(fileUrl.Contains("/font/"),
+                                             Path.Combine(fontDirectory, fileName),
+                                             Path.Combine(savePath, fileName))
 
                     ' Download the file asynchronously and save it to the specified path.
-                    Dim responseBytes As Byte() = Await client.GetByteArrayAsync(fileUrl)
+                    Dim responseBytes = Await client.GetByteArrayAsync(fileUrl)
                     File.WriteAllBytes(fullPath, responseBytes)
                 Next
             End Using
 
             MessageBox.Show("pureHD installata con Successo !", "Shaddar-Nur | Attenzione !", MessageBoxButtons.OK)
-            Dim result As DialogResult = MessageBox.Show("Vuoi avviare ora il gioco con la Mod Grafica pureHD ?",
-                                                          "Shaddar-Nur | Attenzione !",
-                                                          MessageBoxButtons.YesNo)
+
+            ' Enable Button5 after successful installation
+            Button5.Enabled = True
+
+            Dim result = MessageBox.Show("Vuoi avviare ora il gioco con la Mod Grafica pureHD ?",
+                                      "Shaddar-Nur | Attenzione !",
+                                      MessageBoxButtons.YesNo)
 
             If result = DialogResult.Yes Then
                 Dim form3 As New ScegliRisoluzione()
@@ -129,6 +131,8 @@ Public Class SchermataPrincipale
             MessageBox.Show("Errore: " & ex.Message, "Download Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         MessageBox.Show("Attualmente non disponibile", "Shaddar-Nur | Attenzione !")
@@ -171,4 +175,13 @@ Public Class SchermataPrincipale
         WebView22.CoreWebView2.Navigate("https://shaddarnur.altervista.org/pages/news2.html")
     End Sub
 
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Try
+            Process.Start("Config.exe")
+        Catch ex As Exception
+            MessageBox.Show("Il Launcher non si trova nel percorso di installazione di Sacred !",
+                              "Shaddar-Nur | Attenzione !")
+
+        End Try
+    End Sub
 End Class

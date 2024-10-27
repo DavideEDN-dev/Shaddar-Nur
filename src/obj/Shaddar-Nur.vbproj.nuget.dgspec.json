@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj": {}
+    "C:\\Users\\david\\Desktop\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj": {
+    "C:\\Users\\david\\Desktop\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj",
+        "projectUniqueName": "C:\\Users\\david\\Desktop\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj",
         "projectName": "Shaddar-Nur",
-        "projectPath": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj",
+        "projectPath": "C:\\Users\\david\\Desktop\\Shaddar-Nur\\src\\Shaddar-Nur.vbproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\Desktop\\DavideEDN-dev\\Shaddar-Nur\\src\\obj\\",
+        "outputPath": "C:\\Users\\david\\Desktop\\Shaddar-Nur\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",

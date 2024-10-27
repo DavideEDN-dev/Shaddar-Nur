@@ -1,0 +1,1 @@
+C:\Users\david\source\repos\Shaddar-Nur\src\bin\Windows\Release\net8.0-windows\publish\win-x64\Shaddar-Nur.exe

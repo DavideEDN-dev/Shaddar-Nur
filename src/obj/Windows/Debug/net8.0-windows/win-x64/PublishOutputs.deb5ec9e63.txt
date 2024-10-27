@@ -1,0 +1,5 @@
+C:\Users\david\Source\Repos\Shaddar-Nur\src\bin\Windows\Release\net8.0-windows\publish\win-x64\Shaddar-Nur.dll.config
+C:\Users\david\Source\Repos\Shaddar-Nur\src\bin\Windows\Release\net8.0-windows\publish\win-x64\Microsoft.Web.WebView2.Core.xml
+C:\Users\david\Source\Repos\Shaddar-Nur\src\bin\Windows\Release\net8.0-windows\publish\win-x64\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\david\Source\Repos\Shaddar-Nur\src\bin\Windows\Release\net8.0-windows\publish\win-x64\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\david\Source\Repos\Shaddar-Nur\src\bin\Windows\Release\net8.0-windows\publish\win-x64\Shaddar-Nur.exe

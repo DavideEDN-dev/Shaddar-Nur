@@ -41,6 +41,7 @@ Partial Class SchermataPrincipale
         Button6 = New Button()
         GroupBox6 = New GroupBox()
         GroupBox7 = New GroupBox()
+        Button14 = New Button()
         Button9 = New Button()
         Button7 = New Button()
         Button8 = New Button()
@@ -263,25 +264,39 @@ Partial Class SchermataPrincipale
         ' 
         ' GroupBox7
         ' 
+        GroupBox7.Controls.Add(Button14)
         GroupBox7.Controls.Add(Button9)
         GroupBox7.Controls.Add(Button7)
         GroupBox7.Controls.Add(Button8)
         GroupBox7.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox7.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        GroupBox7.Location = New Point(913, 397)
+        GroupBox7.Location = New Point(913, 369)
         GroupBox7.Margin = New Padding(4, 3, 4, 3)
         GroupBox7.Name = "GroupBox7"
         GroupBox7.Padding = New Padding(4, 3, 4, 3)
-        GroupBox7.Size = New Size(288, 130)
+        GroupBox7.Size = New Size(288, 158)
         GroupBox7.TabIndex = 11
         GroupBox7.TabStop = False
         GroupBox7.Text = "AddOn"
+        ' 
+        ' Button14
+        ' 
+        Button14.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button14.ForeColor = Color.Black
+        Button14.Location = New Point(7, 21)
+        Button14.Margin = New Padding(4, 3, 4, 3)
+        Button14.Name = "Button14"
+        Button14.Size = New Size(273, 27)
+        Button14.TabIndex = 10
+        Button14.TabStop = False
+        Button14.Text = "Impostazioni Sacred"
+        Button14.UseVisualStyleBackColor = True
         ' 
         ' Button9
         ' 
         Button9.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button9.ForeColor = Color.Black
-        Button9.Location = New Point(8, 87)
+        Button9.Location = New Point(8, 120)
         Button9.Margin = New Padding(4, 3, 4, 3)
         Button9.Name = "Button9"
         Button9.Size = New Size(273, 27)
@@ -294,7 +309,7 @@ Partial Class SchermataPrincipale
         ' 
         Button7.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button7.ForeColor = Color.Black
-        Button7.Location = New Point(8, 21)
+        Button7.Location = New Point(7, 54)
         Button7.Margin = New Padding(4, 3, 4, 3)
         Button7.Name = "Button7"
         Button7.Size = New Size(273, 27)
@@ -307,7 +322,7 @@ Partial Class SchermataPrincipale
         ' 
         Button8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button8.ForeColor = Color.Black
-        Button8.Location = New Point(8, 54)
+        Button8.Location = New Point(8, 87)
         Button8.Margin = New Padding(4, 3, 4, 3)
         Button8.Name = "Button8"
         Button8.Size = New Size(273, 27)
@@ -442,7 +457,7 @@ Partial Class SchermataPrincipale
         MaximizeBox = False
         Name = "SchermataPrincipale"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Shaddar-Nur | Sacred Online Community ITA | 1.2.1"
+        Text = "Shaddar-Nur | Sacred Online Community ITA | 1.2.2"
         GroupBox2.ResumeLayout(False)
         CType(WebView22, ComponentModel.ISupportInitialize).EndInit()
         GroupBox3.ResumeLayout(False)
@@ -485,4 +500,5 @@ Partial Class SchermataPrincipale
     Friend WithEvents WebView22 As Microsoft.Web.WebView2.WinForms.WebView2
     Friend WithEvents Button10 As Button
     Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
 End Class
